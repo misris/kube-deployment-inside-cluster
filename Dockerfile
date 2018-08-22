@@ -1,10 +1,11 @@
-FROM node
+FROM datagovsg/python-node
 
 WORKDIR /usr/src/app
 
 COPY . .
 
 RUN npm install
+RUN pip install kubernetes
 
 EXPOSE 3000
 
